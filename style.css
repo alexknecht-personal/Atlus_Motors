@@ -116,6 +116,134 @@ h1, h2, h3, h4, .logo, .btn-primary, .eyebrow, .code-box {
 .code-box span { color: var(--iron-gold); }
 .footer-bottom { text-align: center; font-size: 0.8rem; opacity: 0.4; border-top: 1px solid #1a1a1a; padding-top: 2rem; }
 
+/* --- Contact Page (Light & Centered) --- */
+.contact-light-theme {
+    background-color: #FFFFFF; /* Pure white background */
+    color: var(--forge-black);
+}
+
+/* Override nav for the white page */
+.light-nav {
+    background: #FFFFFF;
+    border-bottom: 1px solid #E1DBD2; /* Ash White border */
+}
+.light-nav .logo { color: var(--forge-black); }
+.light-nav .light-btn {
+    border-color: var(--forge-black);
+    color: var(--forge-black);
+}
+.light-nav .light-btn:hover {
+    background-color: var(--forge-black);
+    color: #FFFFFF;
+}
+
+/* Centering mechanism */
+.contact-centered {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 8rem 0 4rem; /* Accounts for navbar */
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 800px;
+    background: #FFFFFF;
+}
+
+/* Larger Text */
+.form-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.form-header h1 {
+    font-size: 3.5rem; /* Much larger */
+    color: var(--forge-black);
+    margin-bottom: 1rem;
+}
+.form-intro {
+    font-size: 1.25rem;
+    color: #444; /* Dark gray for readability */
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* Form Layout & Inputs */
+.altus-form-large {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem; /* More breathing room */
+}
+.form-grid-large {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+.full-width {
+    width: 100%;
+}
+
+.input-group-large {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.input-group-large label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.2rem; /* Larger labels */
+    color: var(--iron-gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Blended Text Boxes */
+.input-group-large input, 
+.input-group-large select, 
+.input-group-large textarea {
+    background-color: transparent; /* Same as background */
+    color: var(--forge-black);
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem; /* Larger typing text */
+    padding: 0.5rem 0;
+    border: none;
+    border-bottom: 2px solid var(--forge-black); /* Only a bottom line */
+    border-radius: 0;
+}
+
+.input-group-large input:focus, 
+.input-group-large select:focus, 
+.input-group-large textarea:focus {
+    outline: none;
+    border-bottom-color: var(--iron-gold); /* Highlights gold when typing */
+}
+
+/* Removes default dropdown styling to keep it clean */
+.input-group-large select {
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+.form-submit-large {
+    font-size: 1.2rem;
+    padding: 1.2rem;
+    width: 100%;
+    margin-top: 1rem;
+    cursor: pointer;
+    border: none;
+}
+
+/* Mobile Adjustment */
+@media (max-width: 650px) {
+    .form-grid-large { grid-template-columns: 1fr; gap: 2rem; }
+    .form-header h1 { font-size: 2.5rem; }
+}
+
 @media (max-width: 768px) {
     .hero h1 { font-size: 2.5rem; }
     .nav-links { display: none; }
